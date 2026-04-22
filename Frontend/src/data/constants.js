@@ -25,7 +25,7 @@ export const PROJECTS = [
     tag: "IDS / WAF",
     desc: "Advanced Intrusion Detection & Web Protection System. Combines Snort IPS + ModSecurity + Python automation engine. Blocks SQLi, XSS, DoS, port scans with real-time UFW IP blacklisting.",
     tags: ["Python", "Snort", "ModSecurity", "Splunk", "Linux/UFW"],
-    img: "/assets/images/projects/SentinelShield/dash.png",
+    img: "./assets/images/projects/SentinelShield/dash.png",
   },
   {
     id: "ip-scanner",
@@ -34,7 +34,7 @@ export const PROJECTS = [
     tag: "Security Tool",
     desc: "Full-stack cybersecurity application. FastAPI backend + React frontend. IP scanning, OS detection, geolocation, TCP/UDP port analysis for security researchers and pentesters.",
     tags: ["Python", "FastAPI", "React.js", "Nmap", "IP-API"],
-    img: "/assets/images/projects/ip-scanner/dash.png",
+    img: "./assets/images/projects/ip-scanner/dash.png",
   },
   {
     id: "riderush",
@@ -43,7 +43,7 @@ export const PROJECTS = [
     tag: "Full-Stack",
     desc: "Cab booking management system with real-time GPS tracking, Socket.IO notifications, Razorpay payments, driver management and comprehensive admin panel.",
     tags: ["React.js", "Node.js", "MongoDB", "Socket.IO", "Google Maps"],
-    img: "/assets/images/projects/riderush/home.png",
+    img: "./assets/images/projects/riderush/home.png",
   },
   {
     id: "pyedr",
@@ -52,16 +52,16 @@ export const PROJECTS = [
     tag: "EDR / Blue Team",
     desc: "Full Python Endpoint Detection & Response platform inspired by CrowdStrike Falcon. Real-time telemetry collection, MITRE ATT&CK-mapped detection, live SOC dashboard, and one-click endpoint isolation — all open-source.",
     tags: ["Python", "Flask", "psutil", "Socket.IO", "MITRE ATT&CK"],
-    img: "/assets/images/projects/pyedr/dash.png",
+    img: "./assets/images/projects/pyedr/dash.png",
   },
 ];
 
 export const CERTS = [
-  { name: "Tata Cybersecurity", img: "/assets/images/cert/tata.png", link: null },
-  { name: "Google Certificate", img: "/assets/images/cert/google.jpeg", link: "https://www.linkedin.com/in/prit-gujarati-2a703b275/details/certifications/" },
-  { name: "CEH", img: "/assets/images/cert/ceh.jpg", link: "https://www.linkedin.com/posts/prit-gujarati-2a703b275_certifiedethicalhacker-ceh-cybersecurity-activity-7372469681779093504-BruQ" },
-  { name: "Network+", img: "/assets/images/cert/network+.jpg", link: "https://www.linkedin.com/posts/prit-gujarati-2a703b275_certificate-of-completion-activity-7354702115912531968-tv6V" },
-  { name: "Security+", img: "/assets/images/cert/security+.jpg", link: "https://www.linkedin.com/posts/prit-gujarati-2a703b275_certificate-of-completion-activity-7351139150261059585-A_fg" },
+  { name: "Tata Cybersecurity", img: "./assets/images/cert/tata.png", link: null },
+  { name: "Google Certificate", img: "./assets/images/cert/google.jpeg", link: "https://www.linkedin.com/in/prit-gujarati-2a703b275/details/certifications/" },
+  { name: "CEH", img: "./assets/images/cert/ceh.jpg", link: "https://www.linkedin.com/posts/prit-gujarati-2a703b275_certifiedethicalhacker-ceh-cybersecurity-activity-7372469681779093504-BruQ" },
+  { name: "Network+", img: "./assets/images/cert/network+.jpg", link: "https://www.linkedin.com/posts/prit-gujarati-2a703b275_certificate-of-completion-activity-7354702115912531968-tv6V" },
+  { name: "Security+", img: "./assets/images/cert/security+.jpg", link: "https://www.linkedin.com/posts/prit-gujarati-2a703b275_certificate-of-completion-activity-7351139150261059585-A_fg" },
 ];
 
 export const PRACTICES = [

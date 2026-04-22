@@ -66,7 +66,7 @@ export default function HealthHazard() {
               $ npm install <span className="t-red">healthchk-lib@1.0.1</span>
               <span className="t-green"><br /># Malicious postinstall script triggers silently</span>
             </div>
-            <LabMedia src="/assets/images/practical/health-hazard/s-1.png" alt="Stage 1 Initial Access" caption="Attack Chain Stage 1 – Supply Chain Initial Access" onZoom={setLightbox} />
+            <LabMedia src="./assets/images/practical/health-hazard/s-1.png" alt="Stage 1 Initial Access" caption="Attack Chain Stage 1 – Supply Chain Initial Access" onZoom={setLightbox} />
           </div>
         </div>
 
@@ -83,7 +83,7 @@ export default function HealthHazard() {
               cmd.exe /d /s /c powershell.exe <span className="t-red">-NoP -W Hidden -EncodedCommand</span>
               <span className="t-green"><br /># Encoded payload downloads SystemHealthUpdater.exe</span>
             </div>
-            <LabMedia src="/assets/images/practical/health-hazard/s-2.png" alt="Stage 2 Execution" caption="Attack Chain Stage 2 – Hidden PowerShell Execution" onZoom={setLightbox} />
+            <LabMedia src="./assets/images/practical/health-hazard/s-2.png" alt="Stage 2 Execution" caption="Attack Chain Stage 2 – Hidden PowerShell Execution" onZoom={setLightbox} />
           </div>
         </div>
 
@@ -100,7 +100,7 @@ export default function HealthHazard() {
               index=sysmon EventCode=1<br />
               | search <span className="t-cyan">powershell.exe</span> AND <span className="t-cyan">EncodedCommand</span>
             </div>
-            <LabMedia src="/assets/images/practical/health-hazard/splunk.png" alt="Splunk log evidence" caption="Sysmon telemetry confirming the execution chain in Splunk" onZoom={setLightbox} />
+            <LabMedia src="./assets/images/practical/health-hazard/splunk.png" alt="Splunk log evidence" caption="Sysmon telemetry confirming the execution chain in Splunk" onZoom={setLightbox} />
           </div>
         </div>
 
@@ -117,7 +117,7 @@ export default function HealthHazard() {
               HKCU\Software\Microsoft\Windows\CurrentVersion\Run<br />
               Value Name: <span className="t-red">Windows Update Monitor</span>
             </div>
-            <LabMedia src="/assets/images/practical/health-hazard/s-3.png" alt="Stage 3 Persistence" caption="Attack Chain Stage 3 – Registry Run Key Persistence" onZoom={setLightbox} />
+            <LabMedia src="./assets/images/practical/health-hazard/s-3.png" alt="Stage 3 Persistence" caption="Attack Chain Stage 3 – Registry Run Key Persistence" onZoom={setLightbox} />
           </div>
         </div>
 

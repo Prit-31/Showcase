@@ -64,7 +64,7 @@ export default function SOCPhishing() {
               Sender Domain: <span className="t-cyan">m1crosoftsupport.co</span><br />
               Threat Type: <span className="t-red">Credential Harvesting</span>
             </div>
-            <LabMedia src="/assets/images/practical/phishing/s-1.png" alt="Email phishing alert" caption="Email phishing alert — lookalike domain identified" onZoom={setLightbox} />
+            <LabMedia src="./assets/images/practical/phishing/s-1.png" alt="Email phishing alert" caption="Email phishing alert — lookalike domain identified" onZoom={setLightbox} />
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function SOCPhishing() {
               The correlation confirmed <strong style={{ color: "var(--g)" }}>user interaction (link click)</strong>,
               increasing the risk of credential compromise.
             </p>
-            <LabMedia src="/assets/images/practical/phishing/s-2.png" alt="Firewall log correlation" caption="Firewall logs confirming user clicked the malicious link" onZoom={setLightbox} />
+            <LabMedia src="./assets/images/practical/phishing/s-2.png" alt="Firewall log correlation" caption="Firewall logs confirming user clicked the malicious link" onZoom={setLightbox} />
           </div>
         </div>
 
@@ -126,7 +126,7 @@ export default function SOCPhishing() {
           <div className="p-card-head"><span className="p-card-icon">📄</span><h2>SOC Investigation Report</h2></div>
           <div className="p-card-body">
             <iframe
-              src="/assets/images/practical/phishing/THM-SOC-004.pdf"
+              src="./assets/images/practical/phishing/THM-SOC-004.pdf"
               style={{ width: "100%", height: 560, border: "1px solid var(--border)", display: "block" }}
               title="SOC Phishing Report"
             />
