@@ -86,7 +86,7 @@ export default function Hero({ scrollTo }) {
           <div className="hero-img-corner tr" />
           <div className="hero-img-corner bl" />
           <div className="hero-img-corner br" />
-          <img src="./assets/images/profile.jpeg" alt="Prit Gujarati" />
+          <img src="/assets/images/profile.jpeg" alt="Prit Gujarati" />
         </div>
       </div>
     </section>
