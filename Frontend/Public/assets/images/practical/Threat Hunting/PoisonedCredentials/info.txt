@@ -1,0 +1,63 @@
+PoisonedCredentials Lab
+Analyze network traffic for LLMNR/NBT-NS poisoning attacks using Wireshark to identify the rogue machine, compromised accounts, and affected systems.
+
+Category:
+Network Forensics
+Tactics:
+Credential Access
+Collection
+Tool:
+Wireshark
+
+
+
+Scenario
+Your organization's security team has detected a surge in suspicious network activity. There are concerns that LLMNR (Link-Local Multicast Name Resolution) and NBT-NS (NetBIOS Name Service) poisoning attacks may be occurring within your network. These attacks are known for exploiting these protocols to intercept network traffic and potentially compromise user credentials. Your task is to investigate the network logs and examine captured network traffic.
+
+
+
+In the context of the incident described in the scenario, the attacker initiated their actions by taking advantage of benign network traffic from legitimate machines. Can you identify the specific mistyped query made by the machine with the IP address 192.168.232.162?
+
+
+fileshaare
+**********
+You have already solved this question.
+
+Q2
+Solved : 9393
+
+We are investigating a network security incident. To conduct a thorough investigation, We need to determine the IP address of the rogue machine. What is the IP address of the machine acting as the rogue entity?
+
+
+***.***.***.***
+***.***.***.***
+Q3
+Solved : 9286
+
+As part of our investigation, identifying all affected machines is essential. What is the IP address of the second machine that received poisoned responses from the rogue machine?
+
+
+192.168.232.176
+***.***.***.***
+Q4
+Solved : 9200
+
+We suspect that user accounts may have been compromised. To assess this, we must determine the username associated with the compromised account. What is the username of the account that the attacker compromised?
+
+
+janesmith
+*********
+Q5
+Solved : 9020
+
+As part of our investigation, we aim to understand the extent of the attacker's activities. What is the hostname of the machine that the attacker accessed via SMB?
+
+
+AccountingPC
+************
+
+
+
+
+proof :https://cyberdefenders.org/blueteam-ctf-challenges/achievements/Prit_Gujarati/poisonedcredentials/
+ 

@@ -1,0 +1,239 @@
+/* ═══════════════════════════════════════════════
+   VAULT — Private TryHackMe Revision Portal
+   Matches portfolio green/terminal theme
+═══════════════════════════════════════════════ */
+
+.vault-page {
+  min-height: 100vh;
+  background: var(--bg1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── TOP BAR ── */
+.vault-topbar {
+  position: sticky; top: 0; z-index: 100;
+  height: 54px;
+  background: rgba(6,13,6,0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+}
+
+.vault-topbar-logo {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px; color: var(--g);
+  text-shadow: 0 0 10px var(--g); letter-spacing: 2px;
+}
+.vault-topbar-logo span { color: var(--c); }
+
+.vault-back-link {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px; color: var(--muted);
+  text-decoration: none; letter-spacing: 1px; text-transform: uppercase;
+  transition: color .2s;
+}
+.vault-back-link:hover { color: var(--g); }
+
+.vault-logout-btn {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  background: transparent; border: 1px solid var(--border);
+  color: var(--muted); padding: 5px 14px; cursor: pointer;
+  text-transform: uppercase; transition: all .2s;
+}
+.vault-logout-btn:hover { border-color: #f85149; color: #f85149; }
+
+/* ── BODY LAYOUT ── */
+.vault-body {
+  display: flex; flex: 1;
+}
+
+/* ── SIDEBAR ── */
+.vault-sidebar {
+  width: 220px; flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  padding: 24px 16px;
+  display: flex; flex-direction: column; gap: 24px;
+  position: sticky; top: 54px; height: calc(100vh - 54px);
+  overflow-y: auto;
+}
+
+.vault-sidebar-section { display: flex; flex-direction: column; gap: 6px; }
+
+.vault-sidebar-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 10px; letter-spacing: 2px;
+  color: var(--muted); text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.vault-search {
+  background: #010409; border: 1px solid var(--border);
+  color: var(--text); padding: 8px 10px;
+  font-family: 'Fira Code', monospace; font-size: 12px;
+  outline: none; width: 100%;
+  transition: border-color .2s;
+}
+.vault-search:focus { border-color: var(--g); }
+
+.vault-filter-btn {
+  background: transparent; border: 1px solid transparent;
+  color: var(--muted); padding: 6px 10px; cursor: pointer;
+  font-family: 'Fira Code', monospace; font-size: 11px;
+  text-align: left; text-transform: uppercase; letter-spacing: 1px;
+  transition: all .2s;
+}
+.vault-filter-btn:hover { color: var(--g); border-color: var(--border); }
+.vault-filter-btn.active { color: var(--g); border-color: var(--g); background: rgba(0,255,65,.05); }
+
+/* ── MAIN ── */
+.vault-main {
+  flex: 1; padding: 40px 5%;
+  overflow-y: auto;
+}
+
+.vault-hero-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 10px;
+}
+.vault-hero-label::before { content: '// '; color: var(--g); }
+
+.vault-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff;
+  margin: 0 0 32px; display: flex; align-items: center; gap: 16px;
+}
+.vault-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--border), transparent); }
+.vault-title span { color: var(--g); text-shadow: 0 0 10px var(--g); }
+
+/* ── ROOM CARD GRID ── */
+.vault-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.vault-room-card {
+  background: var(--card); border: 1px solid var(--border);
+  padding: 20px; display: flex; flex-direction: column; gap: 8px;
+  text-decoration: none; color: inherit;
+  transition: all .25s;
+}
+.vault-room-card:hover { border-color: var(--g); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,255,65,.08); }
+
+.vault-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.vault-card-icon { font-size: 28px; }
+.vault-card-title { font-family: 'Share Tech Mono', monospace; font-size: 15px; color: #fff; }
+.vault-card-cat { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+.vault-card-overview { font-size: 12px; color: var(--muted); line-height: 1.7; flex: 1; margin: 0; }
+
+.vault-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.vault-card-tag {
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 2px 8px; border: 1px solid var(--dim); color: var(--muted);
+}
+.vault-card-tag.tool { border-color: rgba(0,255,65,.25); color: var(--g); }
+
+.vault-card-status { font-size: 11px; font-family: 'Fira Code', monospace; margin-top: 4px; letter-spacing: 1px; }
+.vault-card-status.done { color: var(--g); }
+.vault-card-status.pending { color: var(--muted); }
+
+/* difficulty badge */
+.vault-diff-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 2px 8px; border: 1px solid;
+}
+.diff-easy   { border-color: var(--g);    color: var(--g); }
+.diff-medium { border-color: #e3b341;     color: #e3b341; }
+.diff-hard   { border-color: #f85149;     color: #f85149; }
+
+/* ── EMPTY STATE ── */
+.vault-empty {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; min-height: 300px; gap: 16px;
+  text-align: center;
+  color: var(--muted); font-size: 13px; line-height: 1.8;
+  border: 1px dashed var(--border);
+}
+
+/* ═══════════════════════════════════════
+   ROOM DETAIL PAGE
+═══════════════════════════════════════ */
+.vault-room-page { padding: 40px 5%; max-width: 1200px; margin: 0 auto; width: 100%; }
+
+.vault-room-header { margin-bottom: 40px; }
+.vault-room-hero-label { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.vault-room-hero-label::before { content: '// '; color: var(--g); }
+
+.vault-room-h1 { font-family: 'Share Tech Mono', monospace; font-size: clamp(1.8rem, 3vw, 2.6rem); color: #fff; margin: 0 0 16px; }
+.vault-room-h1 span { color: var(--g); text-shadow: 0 0 12px var(--g); }
+
+.vault-room-meta-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; flex-wrap: wrap; }
+.vault-room-overview { font-size: 14px; color: var(--muted); line-height: 1.8; max-width: 700px; }
+
+.vault-room-cols { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+
+/* ── TASK LIST ── */
+.vault-section-label { font-family: 'Fira Code', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+
+.vault-task {
+  background: var(--card); border: 1px solid var(--border);
+  margin-bottom: 10px; transition: border-color .2s;
+}
+.vault-task:hover { border-color: var(--dim); }
+
+.vault-task-head {
+  padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+  cursor: pointer; user-select: none;
+}
+.vault-task-num { font-family: 'Fira Code', monospace; font-size: 10px; color: var(--muted); border: 1px solid var(--border); padding: 2px 7px; flex-shrink: 0; }
+.vault-task-title { font-family: 'Share Tech Mono', monospace; font-size: 14px; color: #fff; flex: 1; }
+
+.vault-task-body { padding: 16px 18px 20px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 14px; }
+
+.vault-task-notes { font-size: 13px; color: var(--muted); line-height: 1.8; margin: 0; }
+
+.vault-task-cmds { display: flex; flex-direction: column; gap: 6px; }
+.vault-cmd-label { font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; font-family: 'Fira Code', monospace; }
+.vault-cmd {
+  background: #010409; border-left: 3px solid var(--g);
+  padding: 10px 14px;
+  font-family: 'Fira Code', monospace; font-size: 12px; color: var(--g);
+  white-space: pre-wrap; word-break: break-all; line-height: 1.7;
+}
+
+.vault-answer {
+  display: flex; flex-direction: column; gap: 4px;
+  background: rgba(0,255,65,.04); border: 1px solid rgba(0,255,65,.2);
+  padding: 12px 14px;
+}
+.vault-answer-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-family: 'Fira Code', monospace; }
+.vault-answer-val { font-family: 'Fira Code', monospace; font-size: 13px; color: var(--g); font-weight: 700; word-break: break-all; }
+
+.vault-task-img { border: 1px solid var(--border); cursor: zoom-in; transition: border-color .2s; }
+.vault-task-img:hover { border-color: var(--g); }
+.vault-task-img img { width: 100%; height: auto; display: block; filter: brightness(.9); }
+
+/* ── RIGHT SIDEBAR CARDS ── */
+.vault-room-tasks { min-width: 0; }
+.vault-room-info { display: flex; flex-direction: column; gap: 16px; }
+
+.vault-info-card {
+  background: var(--card); border: 1px solid var(--border);
+  padding: 16px 18px;
+}
+
+.vault-info-list { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.vault-info-list li { font-size: 12px; color: var(--text); line-height: 1.6; display: flex; gap: 8px; align-items: flex-start; }
+.vault-info-list li::before { content: '→'; color: var(--g); font-family: 'Fira Code', monospace; flex-shrink: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .vault-body { flex-direction: column; }
+  .vault-sidebar { width: 100%; height: auto; position: static; flex-direction: row; flex-wrap: wrap; border-right: none; border-bottom: 1px solid var(--border); padding: 16px; gap: 16px; }
+  .vault-room-cols { grid-template-columns: 1fr; }
+  .vault-room-info { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+}
