@@ -13,7 +13,7 @@ export default function About() {
       <div className="about-grid">
         <div>
           <div className="about-img-wrap">
-            <img src="/assets/images/profile.jpeg" alt="Prit Gujarati" />
+            <img src="./assets/images/profile.jpeg" alt="Prit Gujarati" />
           </div>
         </div>
 
