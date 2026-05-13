@@ -75,8 +75,18 @@ export default function SOCBruteForce() {
               Repeated authentication failures from same IP<br />
               Short time interval between attempts
             </div>
-            <LabMedia src="./assets/images/practical/soc/soc-1.png" alt="Brute force log analysis 1" caption="Brute force indicators in authentication logs" onZoom={setLightbox} />
-            <LabMedia src="./assets/images/practical/soc/soc-2.png" alt="Brute force log analysis 2" caption="Splunk dashboard showing failed login count by IP" onZoom={setLightbox} />
+            <LabMedia
+              src="/assets/images/practical/SOC/soc-1.png"
+              alt="Brute force log analysis 1"
+              caption="Brute force indicators in authentication logs"
+              onZoom={setLightbox}
+            />
+            <LabMedia
+              src="/assets/images/practical/SOC/soc-2.png"
+              alt="Brute force log analysis 2"
+              caption="Splunk dashboard showing failed login count by IP"
+              onZoom={setLightbox}
+            />
           </div>
         </div>
 
@@ -118,7 +128,7 @@ export default function SOCBruteForce() {
               <li>Security recommendations</li>
             </ul>
             <iframe
-              src="./assets/images/practical/SOC/SOC-001-Report.pdf"
+              src="/assets/images/practical/SOC/SOC-001-Report.pdf"
               style={{ width: "100%", height: 560, border: "1px solid var(--border)", display: "block" }}
               title="SOC Brute Force Report"
             />

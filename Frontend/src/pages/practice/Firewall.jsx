@@ -102,8 +102,8 @@ export default function Firewall() {
                   ufw limit ssh
                 </div>
                 <p className="p-caption">Click images to zoom</p>
-                <Img src="./assets/images/practical/firewall/ssh-rate-limit.jpeg" alt="SSH rate limiting rule" />
-                <Img src="./assets/images/practical/firewall/test-ssh-rate-limit.jpeg" alt="SSH brute-force test result" />
+                <Img src="../assets/images/practical/firewall/ssh-rate-limit.jpeg" alt="SSH rate limiting rule" />
+                <Img src="../assets/images/practical/firewall/test-ssh-rate-limit.jpeg" alt="SSH brute-force test result" />
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function Firewall() {
 
                 <div className="state-label state-before">Before: Unrestricted ICMP</div>
                 <div className="p-terminal">$ ping <span className="t-cyan">x.x.x.x</span> <span className="t-red"># From attacker machine — succeeds</span></div>
-                <Img src="./assets/images/practical/firewall/before-icmp-block.jpeg" alt="ICMP allowed before hardening" />
+                <Img src="../assets/images/practical/firewall/before-icmp-block.jpeg" alt="ICMP allowed before hardening" />
 
                 <div className="state-label state-after">After: ICMP Blocked</div>
                 <div className="p-terminal">
@@ -127,8 +127,8 @@ export default function Firewall() {
                   <span className="t-red"># -A ufw-before-input -p icmp --icmp-type echo-request -j ACCEPT</span><br /><br />
                   ufw reload
                 </div>
-                <Img src="./assets/images/practical/firewall/block-icmp.jpeg" alt="ICMP rule disabled" />
-                <Img src="./assets/images/practical/firewall/after-icmp-block.jpeg" alt="ICMP blocked after hardening" />
+                <Img src="../assets/images/practical/firewall/block-icmp.jpeg" alt="ICMP rule disabled" />
+                <Img src="../assets/images/practical/firewall/after-icmp-block.jpeg" alt="ICMP blocked after hardening" />
               </div>
             </div>
           </>
@@ -145,7 +145,7 @@ export default function Firewall() {
                   real-world firewall and network hardening techniques in a controlled environment.
                 </p>
                 <div className="p-media" onClick={() => setLightbox("./assets/images/practical/firewall/company-server.png")}>
-                  <img src="./assets/images/practical/firewall/company-server.png" alt="Company server hardening" />
+                  <img src="../assets/images/practical/firewall/company-server.png" alt="Company server hardening" />
                 </div>
               </div>
             </div>

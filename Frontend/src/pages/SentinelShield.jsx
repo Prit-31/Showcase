@@ -191,8 +191,7 @@ export default function SentinelShield() {
             <div className="p-terminal">
               <span className="t-green"># Security Rule Activation</span><br />
               SecRuleEngine On<br />
-              SecDefaultAction <span className="t-cyan">"phase:1,log,auditlog,deny,status:403"</span>
-            </div>
+              </div>
             <Img src="../assets/images/projects/SentinelShield/after-waf.jpg" alt="Blocked Request" />
           </div>
         </div>

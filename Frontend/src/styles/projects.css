@@ -158,6 +158,7 @@
   font-size: 10px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 1px;
   margin-left: 6px; vertical-align: middle;
+  margin-bottom: 6px;
 }
 .b-block { background: rgba(248,81,73,.15); color: #f85149; border: 1px solid #f85149; }
 .b-detect { background: rgba(0,212,255,.12); color: var(--c); border: 1px solid var(--c); }
@@ -503,4 +504,44 @@
 @media (max-width: 768px) {
   .lab-hub-grid { grid-template-columns: 1fr; }
   .lab-step-body { padding: 14px 16px; }
+}
+/* ── PHONE SCREENSHOT ── */
+.p-media-phone {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+
+.p-phone {
+  width: 200px;
+  flex-shrink: 0;
+  border: 6px solid #1a2533;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--border), 0 20px 40px rgba(0,0,0,0.6);
+  cursor: zoom-in;
+  transition: border-color .2s, transform .2s;
+}
+
+.p-phone:hover {
+  border-color: var(--g);
+  transform: translateY(-4px);
+}
+
+.p-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(.9) saturate(.85);
+  transition: filter .3s;
+}
+
+.p-phone:hover img {
+  filter: brightness(1) saturate(1);
+}
+
+@media (max-width: 768px) {
+  .p-phone { width: 160px; }
 }

@@ -1,23 +1,65 @@
 export const SKILLS = [
-  { name: "Web Development", icon: "https://img.icons8.com/color/48/web.png" },
-  { name: "Python", icon: "https://img.icons8.com/color/48/python--v1.png" },
-  { name: "Nmap", icon: "https://img.icons8.com/?size=100&id=9b5wowKIlo9d&format=png&color=40C057" },
-  { name: "Wireshark", icon: "https://img.icons8.com/?size=100&id=rOHcpTUtCTjr&format=png&color=40C057" },
-  { name: "Kali Linux", icon: "https://www.kali.org/images/kali-dragon-icon.svg" },
-  { name: "Splunk", icon: "https://images.seeklogo.com/logo-png/33/1/splunk-logo-png_seeklogo-333673.png" },
-  { name: "SIEM", icon: "https://img.icons8.com/fluency/48/security-checked.png" },
-  { name: "Log Analysis", icon: "https://img.icons8.com/color/48/document--v1.png" },
-  { name: "Incident Response", icon: "https://img.icons8.com/color/48/warranty.png" },
-  { name: "Vulnerability Assessment", icon: "https://img.icons8.com/color/48/security-configuration.png" },
-  { name: "Threat Detection", icon: "https://img.icons8.com/color/48/bug.png" },
-  { name: "Networking", icon: "https://img.icons8.com/color/48/network.png" },
-  { name: "OWASP Top 10", icon: "https://images.seeklogo.com/logo-png/40/1/open-web-application-security-project-owasp-logo-png_seeklogo-408771.png" },
-  { name: "Burp Suite", icon: "https://cdn.shopaccino.com/igmguru/products/untitled-design-1-477741749258147_m.jpg?v=546" },
-  { name: "Cryptography", icon: "https://img.icons8.com/color/48/lock.png" },
-  { name: "Ettercap", icon: "https://avatars.githubusercontent.com/u/1973147?v=4" },
+  {
+    category: "Programming",
+    items: [
+      { name: "Python", icon: "https://img.icons8.com/color/48/python--v1.png" },
+      { name: "Bash", icon: "https://img.icons8.com/color/48/console.png" },
+      { name: "SQL", icon: "https://img.icons8.com/color/48/sql.png" },
+      { name: "Node.js", icon: "https://img.icons8.com/color/48/nodejs.png" },
+      { name: "React", icon: "https://img.icons8.com/color/48/react-native.png" },
+      { name: "MongoDB", icon: "https://img.icons8.com/color/48/mongodb.png" },
+      { name: "REST APIs", icon: "https://img.icons8.com/color/48/api.png" },
+    ],
+  },
+  {
+    category: "Security Tools",
+    items: [
+      { name: "Splunk", icon: "https://images.seeklogo.com/logo-png/33/1/splunk-logo-png_seeklogo-333673.png" },
+      { name: "Snort IDS/IPS", icon: "https://img.icons8.com/color/48/security-checked.png" },
+      { name: "ModSecurity WAF", icon: "https://img.icons8.com/color/48/firewall.png" },
+      { name: "Kali Linux", icon: "https://www.kali.org/images/kali-dragon-icon.svg" },
+      { name: "Nmap", icon: "https://img.icons8.com/?size=100&id=9b5wowKIlo9d&format=png&color=40C057" },
+      { name: "Wireshark", icon: "https://img.icons8.com/?size=100&id=rOHcpTUtCTjr&format=png&color=40C057" },
+      { name: "Burp Suite", icon: "https://img.icons8.com/color/48/bug.png" },
+      { name: "OWASP ZAP", icon: "https://img.icons8.com/color/48/security-configuration.png" },
+      { name: "Metasploit", icon: "https://img.icons8.com/color/48/hacker.png" },
+      { name: "UFW", icon: "https://img.icons8.com/color/48/firewall.png" },
+      { name: "iptables", icon: "https://img.icons8.com/color/48/firewall.png" },
+    ],
+  },
+  {
+    category: "SOC & Blue Team",
+    items: [
+      { name: "SIEM Monitoring", icon: "https://img.icons8.com/fluency/48/security-checked.png" },
+      { name: "Incident Response", icon: "https://img.icons8.com/color/48/warranty.png" },
+      { name: "Threat Detection", icon: "https://img.icons8.com/color/48/bug.png" },
+      { name: "Log Analysis", icon: "https://img.icons8.com/color/48/document--v1.png" },
+      { name: "Network Security", icon: "https://img.icons8.com/color/48/network.png" },
+      { name: "OWASP Top 10", icon: "https://images.seeklogo.com/logo-png/40/1/open-web-application-security-project-owasp-logo-png_seeklogo-408771.png" },
+    ],
+  },
 ];
-
 export const PROJECTS = [
+  {
+    id: "secureeye",
+    name: "SecureEye ",
+    emoji: "🛡️",
+    tag: "Cybersecurity",
+    desc: "AI-powered intrusion detection & remote monitoring system using face recognition, live AV recording, mobile remote control, automated email alerts and cloud sync.",
+    tags: [
+      "Python",
+      "OpenCV",
+      "Flask",
+      "Computer Vision",
+      "Face Recognition",
+      "Live Streaming",
+      "Remote Access",
+      "Automation",
+      "Email Automation",
+      "Cloud Sync"
+    ],
+    img: "/assets/images/projects/secureeye/dash.png",
+  },
   {
     id: "sentinelshield",
     name: "SentinelShield",
@@ -43,17 +85,18 @@ export const PROJECTS = [
     tag: "Full-Stack",
     desc: "Cab booking management system with real-time GPS tracking, Socket.IO notifications, Razorpay payments, driver management and comprehensive admin panel.",
     tags: ["React.js", "Node.js", "MongoDB", "Socket.IO", "Google Maps"],
-    img: "/assets/images/projects/riderush/home.png",
+    img: "/assets/images/projects/secureeye/dash.png",
   },
-  {
-    id: "pyedr",
-    name: "PyEDR",
-    emoji: "🖥️",
-    tag: "EDR / Blue Team",
-    desc: "Full Python Endpoint Detection & Response platform inspired by CrowdStrike Falcon. Real-time telemetry collection, MITRE ATT&CK-mapped detection, live SOC dashboard, and one-click endpoint isolation — all open-source.",
-    tags: ["Python", "Flask", "psutil", "Socket.IO", "MITRE ATT&CK"],
-    img: "/assets/images/projects/pyedr/dash.png",
-  },
+
+  // {
+  //   id: "pyedr",
+  //   name: "PyEDR",
+  //   emoji: "🖥️",
+  //   tag: "EDR / Blue Team",
+  //   desc: "Full Python Endpoint Detection & Response platform inspired by CrowdStrike Falcon. Real-time telemetry collection, MITRE ATT&CK-mapped detection, live SOC dashboard, and one-click endpoint isolation — all open-source.",
+  //   tags: ["Python", "Flask", "psutil", "Socket.IO", "MITRE ATT&CK"],
+  //   img: "/assets/images/projects/pyedr/dash.png",
+  // },
 ];
 
 export const CERTS = [

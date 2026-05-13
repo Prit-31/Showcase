@@ -19,7 +19,7 @@ import SentinelShield from "./pages/SentinelShield";
 import RideRush from "./pages/RideRush";
 import IpScanner from "./pages/IpScanner";
 import PyEDRDetail from "./pages/PyEDRDetail";
-
+import SecureEye from "./pages/SecureEye";
 // Practice pages
 import Firewall from "./pages/practice/Firewall";
 import BlueTeam from "./pages/practice/BlueTeam";
@@ -98,6 +98,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
 
           {/* ── Projects ── */}
+          <Route path="/projects/secureeye" element={<SecureEye />} />
           <Route path="/projects/sentinelshield" element={<SentinelShield />} />
           <Route path="/projects/riderush" element={<RideRush />} />
           <Route path="/projects/ip-scanner" element={<IpScanner />} />
@@ -112,7 +113,7 @@ export default function App() {
           <Route path="/practice/blue-team/soc-brute-force" element={<SOCBruteForce />} />
           <Route path="/practice/blue-team/soc-phishing" element={<SOCPhishing />} />
           <Route path="/practice/blue-team/health-hazard" element={<HealthHazard />} />
-          <Route path="/projects/pyedr" element={<PyEDRDetail />} />
+          {/* <Route path="/projects/pyedr" element={<PyEDRDetail />} /> */}
           {/* ── Vault (private — not linked anywhere) ── */}
           <Route path="/vault/login" element={<VaultLogin />} />
           <Route path="/vault" element={<ProtectedRoute><VaultHub /></ProtectedRoute>} />
