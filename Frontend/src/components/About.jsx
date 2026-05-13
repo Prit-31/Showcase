@@ -90,7 +90,8 @@ export default function About() {
           <div style={{ marginTop: 24 }}>
             <a
               className="btn-g"
-              href="https://drive.google.com/file/d/1tIKzvTC4cmAF9uVVEoXkbVJ-_HOLndgc/view?drive_link"
+              // https://drive.google.com/file/d/1fZG4VVrDjLcTLUX_yRxTlwlkITYRnGG8/view?usp=drive_link
+              href="https://drive.google.com/file/d/1fZG4VVrDjLcTLUX_yRxTlwlkITYRnGG8/view?drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
