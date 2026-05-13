@@ -38,6 +38,11 @@ import VaultLogin from "./vault/VaultLogin";
 import VaultHub from "./vault/VaultHub";
 import VaultRoom from "./vault/VaultRoom";
 
+
+import { helloDev } from "./hooks/dev";
+helloDev();
+
+
 const SCROLL_SPY_IDS = ["home", "about", "skills", "education", "work", "cert", "practice", "contact"];
 
 function Home() {
